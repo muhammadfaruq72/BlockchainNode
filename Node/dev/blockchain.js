@@ -45,7 +45,7 @@ function addToSql() {
 	  con3.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
+		  var sql = "INSERT INTO nodeThree (hashes) VALUES (?)";
 		  const toString2 = JSON.stringify(chainArray);
 		  const values = String(newBlock);
 		  con3.query(sql, [toString2], function (err, result) {
