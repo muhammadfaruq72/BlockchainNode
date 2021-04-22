@@ -25,7 +25,7 @@ app.get('/blockchain', function (req, res) {
 
 app.get('/Data', function (req, res) {
 
-   outputChain('nodeOne');
+   outputChain('nodeThree');
 
 var chain1 = [];
 var chain2 = [];
@@ -120,7 +120,7 @@ j2 = 1;
 
 
 app.get('/chain', function (req, res) {
-	outputChain('nodeOne');
+	outputChain('nodeThree');
 	function outputChain(tableName) {
 		var con4 = mysql.createConnection({
 host: 'localhost',
@@ -248,7 +248,7 @@ port: 3306,
 		  con3.connect(function(err) {
 			  if (err) throw err;
 			  console.log("Connected!");
-			  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
+			  var sql = "INSERT INTO nodeThree (hashes) VALUES (?)";
 			  const toString2 = JSON.stringify(bitcoin.chain[bitcoin.chain.length - 1]);
 			  const values = String(newBlock);
 			  con3.query(sql, [toString2], function (err, result) {
@@ -285,7 +285,7 @@ port: 3306,
 	  con3.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
+		  var sql = "INSERT INTO nodeThree (hashes) VALUES (?)";
 		  const toString2 = JSON.stringify(newBlock);
 		  const values = String(newBlock);
 		  con3.query(sql, [toString2], function (err, result) {
@@ -465,7 +465,7 @@ port: 3306,
 	  con.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "DELETE FROM nodeOne";
+		  var sql = "DELETE FROM nodeThree";
 		  con.query(sql, function (err, result) {
 			if (err) throw err;
 			console.log("Entries Deleted on start!");
@@ -485,7 +485,7 @@ port: 3306,
 	  con3.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
+		  var sql = "INSERT INTO nodeThree (hashes) VALUES (?)";
 		  const toString2 = JSON.stringify(chainArray);
 		  //const values = String(newBlock);
 		  con3.query(sql, [toString2], function (err, result) {
