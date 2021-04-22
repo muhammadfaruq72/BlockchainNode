@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node_1": "nodemon --watch dev -e js  dev/networkNode.js 3000 http://3.141.222.82:3000",
-    "node_2": "nodemon --watch dev -e js  dev/networkNode.js 3001 http://3.141.222.82:3001",
-    "node_3": "nodemon --watch dev -e js  dev/networkNode.js 3002 http://3.141.222.82:3002",
-    "node_4": "nodemon --watch dev -e js  dev/networkNode.js 3003 http://3.141.222.82:3003",
-    "node_5": "nodemon --watch dev -e js  dev/networkNode.js 3004 http://3.141.222.82:3004"
+    "node_1": "nodemon --watch dev -e js  dev/networkNode.js 3000 http://18.190.167.136:3000",
+    "node_2": "nodemon --watch dev -e js  dev/networkNode.js 3001 http://18.190.167.136:3001",
+    "node_3": "nodemon --watch dev -e js  dev/networkNode.js 3002 http://18.190.167.136:3002",
+    "node_4": "nodemon --watch dev -e js  dev/networkNode.js 3003 http://18.190.167.136:3003",
+    "node_5": "nodemon --watch dev -e js  dev/networkNode.js 3004 http://18.190.167.136:3004"
   },
   "author": "",
   "license": "ISC",
