@@ -25,7 +25,7 @@ app.get('/blockchain', function (req, res) {
 
 app.get('/Data', function (req, res) {
 
-   outputChain('customers');
+   outputChain('nodeOne');
 
 var chain1 = [];
 var chain2 = [];
@@ -35,7 +35,7 @@ function outputChain(tableName) {
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
   });
   con4.connect(function(err) {
@@ -120,13 +120,13 @@ j2 = 1;
 
 
 app.get('/chain', function (req, res) {
-	outputChain('customers');
+	outputChain('nodeOne');
 	function outputChain(tableName) {
 		var con4 = mysql.createConnection({
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
 		});
 		con4.connect(function(err) {
@@ -242,13 +242,13 @@ app.get('/mine', function(req, res) {
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
 		  });
 		  con3.connect(function(err) {
 			  if (err) throw err;
 			  console.log("Connected!");
-			  var sql = "INSERT INTO customers (hashes) VALUES (?)";
+			  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
 			  const toString2 = JSON.stringify(bitcoin.chain[bitcoin.chain.length - 1]);
 			  const values = String(newBlock);
 			  con3.query(sql, [toString2], function (err, result) {
@@ -279,13 +279,13 @@ function addToSql() {
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
 	  });
 	  con3.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "INSERT INTO customers (hashes) VALUES (?)";
+		  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
 		  const toString2 = JSON.stringify(newBlock);
 		  const values = String(newBlock);
 		  con3.query(sql, [toString2], function (err, result) {
@@ -458,14 +458,14 @@ app.listen(port, function() {
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
 	  });
 	  
 	  con.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "DELETE FROM customers";
+		  var sql = "DELETE FROM nodeOne";
 		  con.query(sql, function (err, result) {
 			if (err) throw err;
 			console.log("Entries Deleted on start!");
@@ -479,13 +479,13 @@ function addToSql() {
 host: 'localhost',
 user: 'root',
 password: '@00Faruq00@',
-database: 'test',
+database: 'Blockchain',
 port: 3306,
 	  });
 	  con3.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "INSERT INTO customers (hashes) VALUES (?)";
+		  var sql = "INSERT INTO nodeOne (hashes) VALUES (?)";
 		  const toString2 = JSON.stringify(chainArray);
 		  //const values = String(newBlock);
 		  con3.query(sql, [toString2], function (err, result) {
