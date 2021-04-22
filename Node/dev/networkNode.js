@@ -465,7 +465,7 @@ port: 3306,
 	  con.connect(function(err) {
 		  if (err) throw err;
 		  console.log("Connected!");
-		  var sql = "DELETE FROM Customers";
+		  var sql = "DELETE FROM customers";
 		  con.query(sql, function (err, result) {
 			if (err) throw err;
 			console.log("Entries Deleted on start!");
