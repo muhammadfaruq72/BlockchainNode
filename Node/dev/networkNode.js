@@ -32,10 +32,11 @@ var chain2 = [];
 var chain3 = [];
 function outputChain(tableName) {
   var con4 = mysql.createConnection({
-    host     : 'localhost', port: 8889,
-    user     : 'root',
-    password : 'root',
-    database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
   });
   con4.connect(function(err) {
     if (err) throw err;
@@ -122,10 +123,11 @@ app.get('/chain', function (req, res) {
 	outputChain('customers');
 	function outputChain(tableName) {
 		var con4 = mysql.createConnection({
-		  host     : 'localhost', port: 8889,
-		  user     : 'root',
-		  password : 'root',
-		  database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
 		});
 		con4.connect(function(err) {
 		  if (err) throw err;
@@ -237,10 +239,11 @@ app.get('/mine', function(req, res) {
 	//addToSql();
 	function addToSql() {
 		var con3 = mysql.createConnection({
-			host     : 'localhost', port: 8889,
-			user     : 'root',
-			password : 'root',
-			database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
 		  });
 		  con3.connect(function(err) {
 			  if (err) throw err;
@@ -273,10 +276,11 @@ app.post('/receive-new-block', function(req, res) {
 		addToSql();
 function addToSql() {
 	var con3 = mysql.createConnection({
-		host     : 'localhost', port: 8889,
-		user     : 'root',
-		password : 'root',
-		database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
 	  });
 	  con3.connect(function(err) {
 		  if (err) throw err;
@@ -451,10 +455,11 @@ app.get('/block-explorer', function(req, res) {
 app.listen(port, function() {
 	console.log(`Listening on port ${port}...`);
 	var con = mysql.createConnection({
-		host     : 'localhost', port: 8889,
-		user     : 'root',
-		password : 'root',
-		database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
 	  });
 	  
 	  con.connect(function(err) {
@@ -471,10 +476,11 @@ app.listen(port, function() {
 		//addToSql();
 function addToSql() {
 	var con3 = mysql.createConnection({
-		host     : 'localhost', port: 8889,
-		user     : 'root',
-		password : 'root',
-		database : 'test'
+host: 'localhost',
+user: 'root',
+password: '@00Faruq00@',
+database: 'test',
+port: 3306,
 	  });
 	  con3.connect(function(err) {
 		  if (err) throw err;
