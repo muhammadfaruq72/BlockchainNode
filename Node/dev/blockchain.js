@@ -36,10 +36,11 @@ Blockchain.prototype.createNewBlock = function(nonce, previousBlockHash, hash) {
 addToSql();
 function addToSql() {
 	var con3 = mysql.createConnection({
-		host     : 'localhost', port: 8889,
-		user     : 'root',
-		password : 'root',
-		database : 'test'
+		host: 'localhost',
+                user: 'root',
+                password: '@00Faruq00@',
+                database: 'test',
+                port: 3306,
 	  });
 	  con3.connect(function(err) {
 		  if (err) throw err;
